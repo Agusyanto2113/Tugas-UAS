@@ -1,0 +1,134 @@
+.confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation-name: confirm--open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm--close {
+    animation-name: confirm--close;
+}
+
+.confirm--window {
+    height: 200px;
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    font-size: 14px;
+    font-family: 'Nova Square', cursive;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.75);
+    animation-name: confirm--window---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+.confirm--titlebar,
+.confrim--content,
+.confirm--button {
+    padding: 1.25em;
+}
+
+.confirm--titlebar {
+    background: red;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm--title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.confirm--close {
+    background: none;
+    outline: none;
+    border: none;
+    transform: scale(2.5);
+    color: #fff;
+    transition: color 0.15s;
+}
+
+.confirm--close:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.confirm--content {
+    line-height: 1.8em;
+    font-size: 2rem;
+    color: red;
+}
+
+.confirm--buttons {
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.confirm--button {
+    padding: 10px 30px;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 5px;
+    background: red;
+    color: white;
+}
+
+.confirm--button:focus {
+    box-shadow: rgba(255, 0, 0, 0.6);
+}
+
+.confirm--button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(244, 63, 8, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.confirm--buttons[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+@keyframes confirm--open {
+    form {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes confirm--close {
+    form {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes confirm--window---open {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+body {
+    background-image: url(desaininteraksi.jpg);
+}
+
+#home {
+    position: absolute;
+    align-items: center;
+    left: 120px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nova Square', cursive;
+}
+
+h1 {
+    font-size: 45px;
+    color: rgb(255, 0, 0);
+    margin-bottom: 2rem;
+    padding-top: 7rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 2rem;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    z-index: 100px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.flex-center {
+    justify-content: flex;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 1.2rem 0;
+    width: 20rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgb(230, 19, 19) 0%, rgb(255, 0, 0) 100%);
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(244, 63, 8, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-btn {
+    background: linear-gradient(90deg, rgb(230, 19, 19) 0%, rgb(255, 0, 0) 100%);
+}
+
+#highscore-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5)
+}
+
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(244, 63, 8, 0.6);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+#username {
+    margin-bottom: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+#saveScoreBtn {
+    border: none;
+}
+
+.confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation-name: confirm--open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm--close {
+    animation-name: confirm--close;
+}
+
+.confirm--window {
+    height: 200px;
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    font-size: 14px;
+    font-family: 'Nova Square', cursive;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.75);
+    animation-name: confirm--window---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+.confirm--titlebar,
+.confrim--content,
+.confirm--button {
+    padding: 1.25em;
+}
+
+.confirm--titlebar {
+    background: red;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm--title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.confirm--close {
+    background: none;
+    outline: none;
+    border: none;
+    transform: scale(2.5);
+    color: #fff;
+    transition: color 0.15s;
+}
+
+.confirm--close:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.confirm--content {
+    line-height: 1.8em;
+    font-size: 2rem;
+    color: red;
+}
+
+.confirm--buttons {
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.confirm--button {
+    padding: 10px 30px;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 5px;
+    background: red;
+    color: white;
+}
+
+.confirm--button:focus {
+    box-shadow: rgba(255, 0, 0, 0.6);
+}
+
+.confirm--button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(244, 63, 8, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.confirm--buttons[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+@keyframes confirm--open {
+    form {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes confirm--close {
+    form {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes confirm--window---open {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
