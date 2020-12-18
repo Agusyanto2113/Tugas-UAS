@@ -1,6 +1,6 @@
 Mata kuliah : Teknik Pemograman</br>
 Dosen pengampu : Fredian Simanjuntak, S.Kom</br>
-Judul proyek : Website Kuis (Tugas UAS Semester Ganjil)</br>
+Judul proyek : Website Kuis (Tugas UAS Semester Ganjil Tahun 2020)</br>
 Anggota kelompok 9 1SIMB :</br>
 1.Agus Yanto (2031089)</br>
 2.Attlantha Valencia Simbar (2031077)</br>
